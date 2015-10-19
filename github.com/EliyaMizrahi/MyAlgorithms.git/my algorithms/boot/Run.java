@@ -22,7 +22,7 @@ import io.MyDecompressorInputStream;
 public class Run {
 
 	public static void main(String[] args) {
-		Maze3d maze = (new MyMaze3dGenerator(7, 7, 7)).generate(7, 7, 7);
+		Maze3d maze = (new MyMaze3dGenerator(2, 2, 2)).generate(2, 2, 2);
 
 		// save it to a file
 		try {

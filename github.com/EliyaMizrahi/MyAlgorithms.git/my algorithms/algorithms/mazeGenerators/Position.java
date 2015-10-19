@@ -176,7 +176,7 @@ public class Position implements Serializable {
 	 * position
 	 */
 	public String toString() {
-		return "{" + this.y + "," + this.x + "," + this.z + "}";
+		return  this.y + "," + this.x + "," + this.z;
 	}
 
 	/**

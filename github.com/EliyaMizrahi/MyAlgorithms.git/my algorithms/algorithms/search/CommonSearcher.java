@@ -88,15 +88,7 @@ public abstract class CommonSearcher<T> implements Searcher<T> {
 	 * @return true if the state is contained
 	 */
 	protected boolean openListContains(State<T> state) {
-		Iterator<State<T>> itrState = openList.iterator();
-		while (itrState.hasNext()) {
-			State<T> nextTempState = itrState.next();
-			if ((nextTempState.getState()).equals(state.getState()))
-			{
-				return true;
-			}
-		}
-		return false;
+		return openList.contains(state);
 	}
 
 	

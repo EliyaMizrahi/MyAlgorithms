@@ -30,8 +30,8 @@ public class Demo {
 	 * solution. print how many state each algorithm create.
 	 */
 	public void run() {
-		Maze3dGenerator mGenerator = new MyMaze3dGenerator(3, 3, 3);
-		Maze3d maze = mGenerator.generate(3, 3, 3);
+		Maze3dGenerator mGenerator = new MyMaze3dGenerator(2, 2, 2);
+		Maze3d maze = mGenerator.generate(2, 2, 2);
 		maze.print();
 		MazeSearchable mSearchable = new MazeSearchable(maze);
 		CommonSearcher<Position> cSearcher = new BFS<Position>();
@@ -50,5 +50,10 @@ public class Demo {
 		System.out.println("The number of noads evaluated in AStar Air distance is: " + airDistanceState);
 		solution.printStack();
 		
+	}
+	
+	public static void main(String[] args) {
+		Demo demo = new Demo();
+		demo.run();
 	}
 }

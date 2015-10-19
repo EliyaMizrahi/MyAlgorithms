@@ -12,13 +12,14 @@ import java.util.Random;
  * The Maze3d program implements an application that create some maze3d Maze3d
  * consist from the sizes of the axes, the maze3d and the start and goal
  * positions.
+ * 
  * @author Eliya Mizrahi
  * @version 1.0
  * @since 8-9-2015
  *
  */
 
-public class Maze3d implements Serializable{
+public class Maze3d implements Serializable {
 	/**
 	 * 
 	 */
@@ -89,10 +90,10 @@ public class Maze3d implements Serializable{
 	 * @param value
 	 */
 	private void resetCells(int value) {
-		int i, j, k = 0;
-		for (i = 0; i < sizeY; i++) {
-			for (j = 0; j < sizeX; j++) {
-				for (k = 0; k < sizeZ; k++) {
+		//int i, j, k = 0;
+		for (int i = 0; i < sizeY; i++) {
+			for (int j = 0; j < sizeX; j++) {
+				for (int k = 0; k < sizeZ; k++) {
 					this.maze3d[i][j][k] = value;
 				}
 			}
@@ -227,14 +228,14 @@ public class Maze3d implements Serializable{
 		String[] arr = new String[MAX_POSSIBLE_MOVES];
 		// checking right step
 		if (p.getZ() + 1 < sizeZ) {
-			if (getCell(p.getY(), p.getX(), p.getZ()+1) == 0) {
+			if (getCell(p.getY(), p.getX(), p.getZ() + 1) == 0) {
 				arr[index] = "Right";
 				index++;
 			}
 		}
 		// checking left step
 		if (p.getZ() - 1 >= 0) {
-			if (getCell(p.getY(), p.getX(), p.getZ()-1) == 0) {
+			if (getCell(p.getY(), p.getX(), p.getZ() - 1) == 0) {
 				arr[index] = "Left";
 				index++;
 			}
@@ -253,17 +254,17 @@ public class Maze3d implements Serializable{
 				index++;
 			}
 		}
-	
+
 		// checking forward step
 		if (p.getX() + 1 < this.sizeX) {
-			if (getCell(p.getY(), p.getX()+1, p.getZ()) == 0) {
+			if (getCell(p.getY(), p.getX() + 1, p.getZ()) == 0) {
 				arr[index] = "Forward";
 				index++;
 			}
 		}
 		// checking backward step
 		if (p.getX() - 1 >= 0) {
-			if (getCell(p.getY(), p.getX()-1, p.getZ()) == 0) {
+			if (getCell(p.getY(), p.getX() - 1, p.getZ()) == 0) {
 				arr[index] = "Backward";
 				index++;
 			}
